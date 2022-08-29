@@ -15,12 +15,12 @@ heart.forEach(glyph => {
   glyph.addEventListener("click", () => {
     mimicServerCall()
     .then(() => {
-      if (heart.innerText !== FULL_HEART){
-        heart.className = "activated-heart"
-        heart.innerText = FULL_HEART
+      if (glyph.innerText !== FULL_HEART){
+        glyph.className = "activated-heart"
+        glyph.innerText = FULL_HEART
       } else {
-        heart.className = ""
-        heart.innerText = EMPTY_HEART
+        glyph.className = ""
+        glyph.innerText = EMPTY_HEART
       }
     })
     .catch(err => {
